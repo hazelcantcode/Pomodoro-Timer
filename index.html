@@ -12,19 +12,23 @@
   <div class="timer-controls">
     <label>Focus Time (min): <input type="number" id="focusTime" value="25"></label>
     <label>Break Time (min): <input type="number" id="breakTime" value="5"></label>
+  </div>
+
+  <div class="timer-buttons">
     <button id="startBtn">Start Timer</button>
     <button id="resetBtn">Reset</button>
+    <button id="pauseResumeBtn">Pause</button>
   </div>
 
   <div id="spiralContainer">
     <svg id="spiral" width="200" height="200">
-      <circle id="timerCircle" r="90" cx="100" cy="100" stroke="#4ade80" stroke-width="10" fill="none" stroke-dasharray="565" stroke-dashoffset="0"/>
+      <circle id="timerCircle" r="90" cx="100" cy="100" stroke="#F6E5C6" stroke-width="10" fill="none" stroke-dasharray="565" stroke-dashoffset="0"/>
     </svg>
     <div id="timeDisplay">25:00</div>
   </div>
 
   <div class="todo-container">
-    <h2>To-Do List</h2>
+    <h1>To-Do List</h1>
     <input type="text" id="todoInput" placeholder="Add a task" />
     <button id="addTodo">Add</button>
     <ul id="todoList"></ul>
