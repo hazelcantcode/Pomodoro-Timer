@@ -89,3 +89,70 @@ addTodo.addEventListener("click", () => {
   todoList.appendChild(li);
   todoInput.value = "";
 });
+
+const pauseResumeBtn = document.getElementById("pauseResumeBtn");
+let isPaused = false;
+
+pauseResumeBtn.addEventListener("click", () => {
+  if (!interval && remaining > 0) {
+    // Resume
+    interval = setInterval(() => {
+      if (!isPaused) {
+        remaining--;
+
+        updateTime();
+        updateCircle();
+
+        if (remaining <= 0) {
+          clearInterval(interval);
+          interval = null;
+          isFocus = !isFocus;
+          alert(isFocus ? "Focus Time!" : "Break Time!");
+          startBtn.click();
+        }
+      }
+    }, 1000);
+    isPaused = false;
+    pauseResumeBtn.textContent = "Pause";
+    return;
+  }
+
+  isPaused = !isPaused;
+  pauseResumeBtn.textContent = isPaused ? "Resume" : "Pause";
+
+  if (isPaused) {
+    clearInterval(interval);
+    interval = null;
+  } else {
+    interval = setInterval(() => {
+      remaining--;
+
+      updateTime();
+      updateCircle();
+
+      if (remaining <= 0) {
+        clearInterval(interval);
+        interval = null;
+        isFocus = !isFocus;
+        alert(isFocus ? "Focus Time!" : "Break Time!");
+        startBtn.click();
+      }
+    }, 1000);
+  }
+});
+
+resetBtn.addEventListener("click", () => {
+  clearInterval(interval);
+  interval = null;
+  remaining = isFocus
+    ? parseInt(document.getElementById("focusTime").value) * 60
+    : parseInt(document.getElementById("breakTime").value) * 60;
+  updateTime();
+  updateCircle(true);
+
+  // Check if pauseResumeBtn text is "Resume", then switch to "Pause"
+  const pauseResumeBtn = document.getElementById("pauseResumeBtn");
+  if (pauseResumeBtn.textContent === "Resume") {
+    pauseResumeBtn.textContent = "Pause";
+  }
+});
