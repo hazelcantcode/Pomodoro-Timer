@@ -24,7 +24,14 @@ A clean, customizable Pomodoro timer paired with a simple to-do list—designed 
 
 ---
 
-## Technologies Used
+## Credits (Font)
+
+This project uses the Resistance typeface, designed by Benoît Bodhuin.
+Available via Velvetyne Type Foundry under the SIL Open Font License.
+
+---
+
+## Languages Used
 
 - HTML  
 - CSS  
