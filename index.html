@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spiral Pomodoro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Spiral Pomodoro</h1>
+
+  <div class="timer-controls">
+    <label>Focus Time (min): <input type="number" id="focusTime" value="25"></label>
+    <label>Break Time (min): <input type="number" id="breakTime" value="5"></label>
+    <button id="startBtn">Start Timer</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+
+  <div id="spiralContainer">
+    <svg id="spiral" width="200" height="200">
+      <circle id="timerCircle" r="90" cx="100" cy="100" stroke="#4ade80" stroke-width="10" fill="none" stroke-dasharray="565" stroke-dashoffset="0"/>
+    </svg>
+    <div id="timeDisplay">25:00</div>
+  </div>
+
+  <div class="todo-container">
+    <h2>To-Do List</h2>
+    <input type="text" id="todoInput" placeholder="Add a task" />
+    <button id="addTodo">Add</button>
+    <ul id="todoList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
