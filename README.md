@@ -1,10 +1,10 @@
-#Pomodoro Timer
+# Pomodoro Timer
 
 A clean, customizable Pomodoro timer paired with a simple to-do list—designed to help you focus and track tasks with ease. Set your own work and break times, check off progress, and keep productivity gentle yet effective. Built with HTML, CSS, and JavaScript for a lightweight experience.
 
 ---
 
-##Features
+## Features
 
 - Customizable work and break intervals  
 - Integrated to-do list with task check-off and deletion  
@@ -14,7 +14,7 @@ A clean, customizable Pomodoro timer paired with a simple to-do list—designed 
 
 ---
 
-##How to Use
+## How to Use
 
 1. Enter your task in the to-do input field and add it to your list.  
 2. Set your desired work and break durations.  
@@ -24,7 +24,7 @@ A clean, customizable Pomodoro timer paired with a simple to-do list—designed 
 
 ---
 
-##Technologies Used
+## Technologies Used
 
 - HTML  
 - CSS  
@@ -32,13 +32,13 @@ A clean, customizable Pomodoro timer paired with a simple to-do list—designed 
 
 ---
 
-##Contributing
+## Contributing
 
 Feel free to fork this project and submit pull requests. Suggestions and improvements are welcome!
 
 ---
 
-##License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
