@@ -1,0 +1,144 @@
+:root {
+  --primary: #F0E7D5;
+  --secondary: #122220;
+  --accent: #B76635;
+  --text: #F0E7D5;
+  --light: #d7dde9;
+}
+
+body {
+  font-family: sans-serif; 
+  background: var(--secondary);
+  color: var(--text);
+  text-align: center;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: ‘Allerta Stencil’, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.timer-controls input {
+  padding: 6px 10px;
+  border: 1px solid var(--light);
+  border-radius: 20px;
+  width: 35px;
+}
+
+
+button {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 14px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background-color: #F0E7D5;
+}
+
+button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+#spiralContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto 40px;
+}
+
+#timerCircle {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+#timeDisplay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.todo-container {
+  background: #12403C ;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px #0c3330;
+}
+
+
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+#todoList li {
+  background: #9A0002;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todoList li.checked {
+  text-decoration: line-through;
+  color: #212223;
+  background: #F0E7D5;
+}
+
+#todoList li button {
+  background: #F0E7D5;
+  border: none;
+  color: #F0E7D5;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+#todoInput {
+  padding: 6px 10px;
+  border: 1px solid var(--light);
+  border-radius: 20px;
+  width:  130px;
+   padding: 14px;
+}
